@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Vinil</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    </style>
+</head>
+<body>
+    <header id="inicio">
+        <div class="container">
+            <div id="logo">
+                <img src="img/logositecompleta.png" alt="bannersite">
+                <h1>Vinyl Disks</h1>
+
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#store">Loja</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="cart">
+                <span id="cart-count">0</span>
+                <img src="img/cart.png" alt="Carrinho de Compras">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="banner">
+            <img src="img/DiscoJuvenil.webp" alt="Vinyl Records Banner">
+            
+        </div>
+
+        <section id="home" class="section">
+            <div class="container">
+                <h2>Bem-vindo à nossa loja!</h2>
+                <p>Explore nossa coleção de discos de vinil clássicos e modernos.</p>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2>Sobre Nós</h2>
+                <p>Somos apaixonados por vinil e dedicados a trazer para você a melhor seleção de discos.</p>
+            </div>
+        </section>
+
+        <section id="store" class="section">
+            <div class="container">
+                <h2>Lançamentos</h2>
+                <div class="products">
+                    <div class="product">
+                        <img src="img/dangerous.png" alt="Disco de Vinil 1">
+                        <h3>Dangerous</h3>
+                        <p>Artista: Michael Jackson</p>
+                        <p>Preço: R$ 99,90</p>
+                        <button onclick="addToCart('Dangerous')">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="product">
+                        <img src="img/Dang.png" alt="Disco de Vinil 2">
+                        <h3>Xscape</h3>
+                        <p>Artista: Michael Jackson</p>
+                        <p>Preço: R$ 89,90</p>
+                        <button onclick="addToCart('Xscape')">Adicionar ao Carrinho</button>
+                    </div>
+                    <!-- Adicione mais produtos conforme necessário -->
+                </div>
+            </div>
+        </section>
+        <section id="store" class="section">
+            <div class="container">
+                <h2>Mais Vendidos</h2>
+                <div class="products">
+                    <div class="product">
+                        <img src="img/Lady.jpg" alt="Disco de Vinil 1">
+                        <h3>ARTPOP</h3>
+                        <p>Artista: Lady Gaga</p>
+                        <p>Preço: R$ 79,90</p>
+                        <button onclick="addToCart('ARTPOP')">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="product">
+                        <img src="img/adele.png" alt="Disco de Vinil 2">
+                        <h3>30</h3>
+                        <p>Artista: Adele</p>
+                        <p>Preço: R$ 119,90</p>
+                        <button onclick="addToCart('30')">Adicionar ao Carrinho</button>
+                    </div>
+                    <!-- Adicione mais produtos conforme necessário -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contato</h2>
+                <form id="contact-form">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato">
+        <div class="social-media">
+            <a href="#" target="_blank">Facebook</a>
+            <a href="#" target="_blank">Instagram</a>
+            <a href="#" target="_blank">Twitter</a>
+            <a href="#" target="_blank">YouTube</a>
+        </div>
+        <p>&copy; 2024 RetroDiscos. Design By Christopher Domingos.</p>
+    </footer>
+
+    <script>
+        let cartCount = 0;
+
+        function addToCart(product) {
+            cartCount++;
+            document.getElementById('cart-count').textContent = cartCount;
+            alert(product + ' foi adicionado ao carrinho!');
+        }
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Mensagem enviada com sucesso!');
+        });
+    </script>
+</body>
+</html>
